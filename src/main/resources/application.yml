@@ -1,0 +1,26 @@
+server:
+  port: 9898
+spring:
+  application:
+    name: emporio-app
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: 1234
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show_sql: true
+    format-sql: true
+  main:
+    allow-circular-references: true
+  flyway:
+    enabled: true
+    baselineOnMigrate: true
+emporio:
+  app:
+    jwtSecret: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+    jwtExpirationMs: 86400000
+management:
+  security:
+    enabled: false
